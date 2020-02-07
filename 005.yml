@@ -1,0 +1,28 @@
+---
+question: |-
+  STUDENT
+      Sid	  | name	 | login | age | gpa
+      53666	| Kayne	 | A@c   | 28	 | 4.0
+      53655	| Tupac	 | B@c   | 26	 | 3.5
+      53688	| Bieber | C@c   | 22	 | 3.9
+
+
+  ENROLLED
+      Sid	  | cid	   |grade
+      53666	| 15-415 | 	C
+      53688	| 15-721 |	A
+      53688	| 15-826 |	B
+      53655	| 15-415 |	C
+      53666	| 15-721 |	C
+
+
+    Which of the following is the correct outcome of the SQL query below?
+    Query: SELECT student.name, enrolled.grade FROM student, enrolled WHERE student.sid = enrolled.sid AND enrolled.cid = '15-415' AND enrolled.grade IN ('A', 'B')
+
+answers:
+  - Returns the name, grade of the students who took course ’15-415′ and got a grade’ A’ or ‘B’ in that course
+  - Returns the name, grade of the students who took the course ’15-415′ but didn’t get grade ‘A’ or ‘B’ in that course
+  - Error
+  - None of these
+correct: A
+
